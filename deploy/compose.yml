@@ -1,0 +1,8 @@
+services:
+  yt-dlp-tg-bot:
+    image: ghcr.io/tupinumboor/yt-dlp-tg-bot:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./downloads:/downloads

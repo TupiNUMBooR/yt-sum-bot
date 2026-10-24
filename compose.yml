@@ -1,0 +1,9 @@
+services:
+  yt-dlp-tg-bot:
+    image: ghcr.io/tupinumboor/yt-dlp-tg-bot:local
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./downloads:/downloads
